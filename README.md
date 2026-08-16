@@ -71,6 +71,11 @@ ExtentReport: /reports/AutomationReport.html
 
 Screenshots: /screenshots/ (captured on pass/fail)
 
+
+### Recent Updates
+- Added photo upload functionality in Add Employee automation
+
+
 Author
 Ankit Kumar  
 Senior Automation Test Engineer | Infosys

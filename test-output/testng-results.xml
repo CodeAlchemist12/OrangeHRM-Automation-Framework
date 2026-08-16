@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-16T18:15:32 IST" name="Default suite" finished-at="2026-08-16T18:16:11 IST" duration-ms="39598">
+  <suite started-at="2026-08-16T23:59:58 IST" name="Default suite" finished-at="2026-08-17T00:00:28 IST" duration-ms="29467">
     <groups>
     </groups>
-    <test started-at="2026-08-16T18:15:32 IST" name="Default test" finished-at="2026-08-16T18:16:11 IST" duration-ms="39598">
+    <test started-at="2026-08-16T23:59:58 IST" name="Default test" finished-at="2026-08-17T00:00:28 IST" duration-ms="29467">
       <class name="tests.EmployeeLifecycleTest">
-        <test-method is-config="true" signature="setupReport()[pri:0, instance:tests.EmployeeLifecycleTest@1ff4931d]" started-at="2026-08-16T18:15:32 IST" name="setupReport" finished-at="2026-08-16T18:15:32 IST" duration-ms="242" status="PASS">
+        <test-method is-config="true" signature="setupReport()[pri:0, instance:tests.EmployeeLifecycleTest@510f3d34]" started-at="2026-08-16T23:59:58 IST" name="setupReport" finished-at="2026-08-16T23:59:58 IST" duration-ms="175" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupReport -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.EmployeeLifecycleTest@1ff4931d]" started-at="2026-08-16T18:15:32 IST" name="setup" finished-at="2026-08-16T18:15:49 IST" duration-ms="17497" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.EmployeeLifecycleTest@510f3d34]" started-at="2026-08-16T23:59:58 IST" name="setup" finished-at="2026-08-17T00:00:10 IST" duration-ms="11712" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="startExtentTest(java.lang.reflect.Method)[pri:0, instance:tests.EmployeeLifecycleTest@1ff4931d]" started-at="2026-08-16T18:15:49 IST" name="startExtentTest" finished-at="2026-08-16T18:15:49 IST" duration-ms="17" status="PASS">
+        <test-method is-config="true" signature="startExtentTest(java.lang.reflect.Method)[pri:0, instance:tests.EmployeeLifecycleTest@510f3d34]" started-at="2026-08-17T00:00:10 IST" name="startExtentTest" finished-at="2026-08-17T00:00:10 IST" duration-ms="14" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,26 +26,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startExtentTest -->
-        <test-method signature="employeeLifecycleFlow()[pri:0, instance:tests.EmployeeLifecycleTest@1ff4931d]" started-at="2026-08-16T18:15:49 IST" name="employeeLifecycleFlow" finished-at="2026-08-16T18:16:11 IST" duration-ms="21740" status="PASS">
+        <test-method signature="employeeLifecycleFlow()[pri:0, instance:tests.EmployeeLifecycleTest@510f3d34]" started-at="2026-08-17T00:00:10 IST" name="employeeLifecycleFlow" finished-at="2026-08-17T00:00:27 IST" duration-ms="17225" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- employeeLifecycleFlow -->
-        <test-method is-config="true" signature="captureFailure(org.testng.ITestResult)[pri:0, instance:tests.EmployeeLifecycleTest@1ff4931d]" started-at="2026-08-16T18:16:11 IST" name="captureFailure" finished-at="2026-08-16T18:16:11 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="captureFailure(org.testng.ITestResult)[pri:0, instance:tests.EmployeeLifecycleTest@510f3d34]" started-at="2026-08-17T00:00:27 IST" name="captureFailure" finished-at="2026-08-17T00:00:27 IST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=employeeLifecycleFlow status=SUCCESS method=EmployeeLifecycleTest.employeeLifecycleFlow()[pri:0, instance:tests.EmployeeLifecycleTest@1ff4931d] output={null}]]]>
+                <![CDATA[[TestResult name=employeeLifecycleFlow status=SUCCESS method=EmployeeLifecycleTest.employeeLifecycleFlow()[pri:0, instance:tests.EmployeeLifecycleTest@510f3d34] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- captureFailure -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.EmployeeLifecycleTest@1ff4931d]" started-at="2026-08-16T18:16:11 IST" name="tearDown" finished-at="2026-08-16T18:16:11 IST" duration-ms="291" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.EmployeeLifecycleTest@510f3d34]" started-at="2026-08-17T00:00:27 IST" name="tearDown" finished-at="2026-08-17T00:00:28 IST" duration-ms="390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="flushReport()[pri:0, instance:tests.EmployeeLifecycleTest@1ff4931d]" started-at="2026-08-16T18:16:11 IST" name="flushReport" finished-at="2026-08-16T18:16:12 IST" duration-ms="318" status="PASS">
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:tests.EmployeeLifecycleTest@510f3d34]" started-at="2026-08-17T00:00:28 IST" name="flushReport" finished-at="2026-08-17T00:00:28 IST" duration-ms="230" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->

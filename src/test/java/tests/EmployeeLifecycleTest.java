@@ -20,35 +20,37 @@ import utils.ApiHelper;
 
 public class EmployeeLifecycleTest extends BaseTest {
 
-    @Test
-    public void employeeLifecycleFlow() throws InterruptedException {
-        // Login
-        LoginPage login = new LoginPage(driver, wait);
-        login.login("Admin", "admin123");
+	@Test
+	public void employeeLifecycleFlow() throws InterruptedException {
+		// Login
+		LoginPage login = new LoginPage(driver, wait);
+		login.login("Admin", "admin123");
 
-        // Load employee data from JSON
-        Map<String, String> empData = DataUtil.getEmployeeData("src/test/resources/employee.json");
+		// Load employee data from JSON
+		Map<String, String> empData = DataUtil.getEmployeeData("src/test/resources/employee.json");
 
-        EmployeePage empPage = new EmployeePage(driver, wait);
-        String empId = empData.get("employeeId");
+		EmployeePage empPage = new EmployeePage(driver, wait);
+		String empId = empData.get("employeeId");
 
-        // Add Employee (data-driven)
-        empPage.addEmployee(empData.get("firstName"), empData.get("lastName"), empId);
+		// Add Employee (data-driven)
+		String photoPath = System.getProperty("user.dir") + "/src/test/resources/photos/GoKu.jpg";
 
-        // Search Employee
-        empPage.searchEmployee(empId);
+		empPage.addEmployee(empData.get("firstName"), empData.get("lastName"), empData.get("employeeId"), photoPath);
 
-        // Edit Employee
-        empPage.editEmployee("QA Engineer", "Full-Time Permanent");
+		// Search Employee
+		empPage.searchEmployee(empId);
 
-        // Validate via API
-       // ApiHelper.validateEmployee(empId);
+		// Edit Employee
+		empPage.editEmployee("QA Engineer", "Full-Time Permanent");
 
-        // Delete Employee
-        empPage.deleteEmployee(empId);
+		// Validate via API
+		// ApiHelper.validateEmployee(empId);
 
-        // Logout
-        LogoutPage logout = new LogoutPage(driver);
-        logout.performLogout();
-    }
+		// Delete Employee
+		empPage.deleteEmployee(empId);
+
+		// Logout
+		LogoutPage logout = new LogoutPage(driver);
+		logout.performLogout();
+	}
 }
