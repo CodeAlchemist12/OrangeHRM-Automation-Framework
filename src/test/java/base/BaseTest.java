@@ -5,6 +5,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
@@ -25,7 +26,19 @@ public class BaseTest {
     @BeforeClass
     public void setup() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+
+        ChromeOptions options = new ChromeOptions();
+
+        // Detect if running in CI (GitHub Actions sets CI=true)
+        String ciEnv = System.getenv("CI");
+        if (ciEnv != null && ciEnv.equalsIgnoreCase("true")) {
+            options.addArguments("--headless");                // run without UI
+            options.addArguments("--no-sandbox");              // required in CI
+            options.addArguments("--disable-dev-shm-usage");   // avoid resource issues
+            options.addArguments("--disable-gpu");             // safe for Linux runners
+        }
+
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
@@ -34,7 +47,6 @@ public class BaseTest {
 
     @BeforeMethod
     public void startExtentTest(Method method) {
-        // Start a new Extent test for each @Test method
         SeleniumReportUtil.startTest(method.getName());
     }
 
